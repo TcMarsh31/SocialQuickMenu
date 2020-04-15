@@ -16,36 +16,37 @@ namespace SocialQuickMenu
         public MainPage()
         {
             InitializeComponent();
+
+            List<MyList> list = new List<MyList>();
+            list.Add(new MyList { Title = "Floating Button" });
+            list.Add(new MyList { Title = "Fab Menu" });
+            list.Add(new MyList { Title = "Half Circle Fab Menu" });
+            list.Add(new MyList { Title = "Full Circle Fab Menu" });
+
+            listview.ItemsSource = list;
         }
 
-      
 
-        void close(System.Object sender, System.EventArgs e)
+        public class MyList
         {
-            contentPage.Opacity = 1;
-            menuitems.IsVisible = false;
+            public string Title { get; set; }
         }
 
-
-        void TapGestureRecognizer_Tapped_3(System.Object sender, System.EventArgs e)
+        void listview_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
-            Image image = sender as Image;
-            string filename = image.Source.ToString();
-            if (filename == "File: close.png")
+            MyList mylist = e.Item as MyList;
+            if(mylist.Title == "Fab Menu")
             {
-                contentPage.Opacity = 1;
-                menu.Source = "share.png";
-                menulist.IsVisible = false;
-                contentPage.InputTransparent = false;
+                Navigation.PushAsync(new FabMenu());
             }
-            else if (filename == "File: share.png")
+            else if(mylist.Title == "Floating Button")
             {
-                contentPage.Opacity = 0.3;
-                menu.Source = "close.png";
-                menulist.IsVisible = true;
-                contentPage.InputTransparent = true;
+                Navigation.PushAsync(new FloatingButton());
+            }
+            else if (mylist.Title == "Half Circle Fab Menu")
+            {
+                Navigation.PushAsync(new HalfCircleFabMenu());
             }
         }
-
     }
 }
