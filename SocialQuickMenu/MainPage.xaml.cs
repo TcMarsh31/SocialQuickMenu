@@ -21,6 +21,8 @@ namespace SocialQuickMenu
             list.Add(new MyList { Title = "Floating Button" });
             list.Add(new MyList { Title = "Fab Menu" });
             list.Add(new MyList { Title = "Half Circle Fab Menu" });
+            list.Add(new MyList { Title = "Arc Fab Menu" });
+            list.Add(new MyList { Title = "Center Fab Menu" });
             list.Add(new MyList { Title = "Full Circle Fab Menu" });
 
             listview.ItemsSource = list;
@@ -47,6 +49,15 @@ namespace SocialQuickMenu
             {
                 Navigation.PushAsync(new HalfCircleFabMenu());
             }
+            else if (mylist.Title == "Arc Fab Menu")
+            {
+                Navigation.PushAsync(new ArcFabMenu());
+            }
+            else if (mylist.Title == "Center Fab Menu")
+            {
+                Navigation.PushAsync(new CenterFabMenu());
+            }
+
         }
     }
 }
