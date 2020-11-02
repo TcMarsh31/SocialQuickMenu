@@ -36,12 +36,12 @@ namespace SocialQuickMenu
 
                 //wait until all the translate completes
                 await Task.WhenAll(
-                    fb.TranslateTo(fab.X + 10, fab.Y),
-                    twit.TranslateTo(fab.X + 10, fab.Y),
-                    fb2.TranslateTo(fab.X + 10, fab.Y),
-                    twit2.TranslateTo(fab.X + 10, fab.Y),
-                    fb3.TranslateTo(fab.X + 10, fab.Y),
-                    twit3.TranslateTo(fab.X + 10, fab.Y)
+                    fb.TranslateTo(0,0),
+                    twit.TranslateTo(0,0),
+                    fb2.TranslateTo(0,0),
+                    twit2.TranslateTo(0,0),
+                    fb3.TranslateTo(0,0),
+                    twit3.TranslateTo(0,0)
 
                     );
 
@@ -56,6 +56,13 @@ namespace SocialQuickMenu
             else if (filename == "File: share.png")
             {
                 //when share fab button is pressed
+                fb.IsVisible = true;
+                twit.IsVisible = true;
+                fb2.IsVisible = true;
+                twit2.IsVisible = true;
+                fb3.IsVisible = true;
+                twit3.IsVisible = true;
+                contentPage.InputTransparent = true;
 
                 contentPage.Opacity = 0.3;
                 grid.BackgroundColor = Color.Purple;
@@ -65,20 +72,14 @@ namespace SocialQuickMenu
                 menu.WidthRequest = 30;
                 menu.HeightRequest = 30;
 
-                fb.TranslateTo(fb.X - 160, fb.Y);
-                twit.TranslateTo(twit.X - 120, twit.Y - 80);
-                fb2.TranslateTo(fb2.X - 40, fb2.Y - 140);
-                twit2.TranslateTo(twit2.X + 40, twit2.Y - 140);
-                fb3.TranslateTo(fb3.X + 120, fb3.Y - 80);
-                twit3.TranslateTo(twit3.X + 160, twit3.Y);
+                fb.TranslateTo(- 160, 0);
+                twit.TranslateTo(- 120,  - 80);
+                fb2.TranslateTo(- 40,  - 140);
+                twit2.TranslateTo(+ 40,  - 140);
+                fb3.TranslateTo( + 120,  - 80);
+                twit3.TranslateTo( + 160, 0);
                 
-                fb.IsVisible = true;
-                twit.IsVisible = true;
-                fb2.IsVisible = true;
-                twit2.IsVisible = true;
-                fb3.IsVisible = true;
-                twit3.IsVisible = true;
-                contentPage.InputTransparent = true;
+                
 
             }
         }

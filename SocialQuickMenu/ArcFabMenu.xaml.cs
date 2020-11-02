@@ -33,10 +33,10 @@ namespace SocialQuickMenu
                 menu.WidthRequest = 50;
                 menu.HeightRequest = 50;
                 await Task.WhenAll(
-                    fb.TranslateTo(fab.X+10 , fab.Y),
-                    twit.TranslateTo(fab.X+10, fab.Y),
-                    fb2.TranslateTo(fab.X + 10, fab.Y),
-                    twit2.TranslateTo(fab.X + 10, fab.Y)
+                    fb.TranslateTo(0 , 0),
+                    twit.TranslateTo(0, 0),
+                    fb2.TranslateTo(0, 0),
+                    twit2.TranslateTo(0, 0)
                     );
              
                 fb.IsVisible = false;
@@ -47,6 +47,12 @@ namespace SocialQuickMenu
             }
             else if (filename == "File: share.png")
             {
+                fb.IsVisible = true;
+                twit.IsVisible = true;
+                fb2.IsVisible = true;
+                twit2.IsVisible = true;
+                contentPage.InputTransparent = true;
+
                 contentPage.Opacity = 0.3;
                 grid.BackgroundColor = Color.Purple;
                 title.IsVisible = true;
@@ -55,15 +61,11 @@ namespace SocialQuickMenu
                 menu.WidthRequest = 30;
                 menu.HeightRequest = 30;
 
-                fb.TranslateTo(fb.X -200, fb.Y+40);
-                twit.TranslateTo(twit.X - 160, twit.Y - 50);
-                fb2.TranslateTo(fb2.X - 90, fb2.Y - 120);
-                twit2.TranslateTo(twit2.X , twit2.Y - 170);
-                fb.IsVisible = true;
-                twit.IsVisible = true;
-                fb2.IsVisible = true;
-                twit2.IsVisible = true;
-                contentPage.InputTransparent = true;
+                fb.TranslateTo( -200, +40);
+                twit.TranslateTo( - 160,  - 50);
+                fb2.TranslateTo( - 90, - 120);
+                twit2.TranslateTo(0 ,  - 170);
+                
             }
         }
     }

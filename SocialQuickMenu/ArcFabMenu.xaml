@@ -33,16 +33,17 @@
         </StackLayout>
 
         <!-- menu items -->
-        <StackLayout Grid.Row="0" x:Name="menuitems" IsVisible="true" InputTransparent="false" HorizontalOptions="End" VerticalOptions="End" >
-            <StackLayout.Margin>
+        <Grid Grid.Row="0" x:Name="menuitems" IsVisible="true" InputTransparent="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            
+            <!-- menu image-->
+            
+                    <Frame  BackgroundColor="White" x:Name="fab" Margin="0" Padding="0" WidthRequest="60" HeightRequest="60" HorizontalOptions="End" VerticalOptions="End">
+                        <Frame.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
                     <On Platform="iOS">0,20,20,80</On>
                     <On Platform="Android">0,20,20,50</On>
                 </OnPlatform>
-            </StackLayout.Margin>
-            <!-- menu image-->
-            
-                    <Frame  BackgroundColor="White" x:Name="fab" Margin="0" Padding="0" WidthRequest="60" HeightRequest="60" HorizontalOptions="End" VerticalOptions="End">
+            </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="30"></On>
@@ -57,7 +58,13 @@
                     </Frame>
 
                     <!-- menu list layout-->
-                    <Frame Padding="0" IsVisible="False" x:Name="fb" Margin="0,-55,0,0" HasShadow="False" HorizontalOptions="End" VerticalOptions="End"  BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" IsVisible="False" x:Name="fb" HasShadow="False" HorizontalOptions="End" VerticalOptions="End"  BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                        <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS">0,20,20,80</On>
+                    <On Platform="Android">0,20,20,50</On>
+                </OnPlatform>
+            </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
@@ -67,7 +74,13 @@
                         <Image Source="facebook.png" HeightRequest="40" WidthRequest=" 40"></Image>
                     </Frame>
                                
-                    <Frame Padding="0" IsVisible="False" Margin="0,-55,0,0" x:Name="twit" HasShadow="False" HorizontalOptions="End" VerticalOptions="End" WidthRequest="50" HeightRequest="50" BackgroundColor="White">
+                    <Frame Padding="0" IsVisible="False" x:Name="twit" HasShadow="False" HorizontalOptions="End" VerticalOptions="End" WidthRequest="50" HeightRequest="50" BackgroundColor="White">
+                        <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS">0,20,20,80</On>
+                    <On Platform="Android">0,20,20,50</On>
+                </OnPlatform>
+            </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
@@ -78,7 +91,13 @@
                     </Frame>
                             
                               
-                    <Frame Padding="0" x:Name="fb2" IsVisible="False" Margin="0,-55,0,0" HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" x:Name="fb2" IsVisible="False" HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                        <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS">0,20,20,80</On>
+                    <On Platform="Android">0,20,20,50</On>
+                </OnPlatform>
+            </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
@@ -89,7 +108,13 @@
                     </Frame>
                             
 
-                    <Frame Padding="0" x:Name="twit2" IsVisible="False" Margin="0,-55,0,0" HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" x:Name="twit2" IsVisible="False" HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                        <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS">0,20,20,80</On>
+                    <On Platform="Android">0,20,20,50</On>
+                </OnPlatform>
+            </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
@@ -99,7 +124,7 @@
                         <Image Source="twit.png" HeightRequest="40" WidthRequest=" 40" ></Image>
                     </Frame>
                      
-        </StackLayout>
+        </Grid>
 
         <StackLayout x:Name="title" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="False" Margin="0,200,0,0">
             <Label Text=" Fab Action Menu" TextColor="White" FontSize="Large" FontAttributes="Bold"></Label>
