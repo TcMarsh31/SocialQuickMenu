@@ -83,5 +83,35 @@ namespace SocialQuickMenu
 
             }
         }
+
+        void TapGestureRecognizer_TappedTfb1(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("ALERT", "Facebook icon 1 clicked", "OK");
+        }
+        void TapGestureRecognizer_Tappedfb2(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("ALERT", "Facebook icon 2 clicked", "OK");
+        }
+        void TapGestureRecognizer_Tappedfb3(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("ALERT", "Facebook icon 3 clicked", "OK");
+        }
+
+        void TapGestureRecognizer_TappedTwit1(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("ALERT", "Twit icon 1 clicked", "OK");
+        }
+        void TapGestureRecognizer_TappedTwit2(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("ALERT", "Twit icon 2 clicked", "OK");
+        }
+        void TapGestureRecognizer_TappedTwit3(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("ALERT", "Twit icon 3 clicked", "OK");
+        }
+
+        
+
+
     }
 }

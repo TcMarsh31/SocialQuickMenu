@@ -33,15 +33,15 @@
         </StackLayout>
 
         <!-- menu items -->
-        <Grid Grid.Row="0" x:Name="menuitems" IsVisible="true" InputTransparent="false" HorizontalOptions="Center" VerticalOptions="FillAndExpand" >
+        <Grid Grid.Row="0" x:Name="menuitems" IsVisible="true" InputTransparent="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
             
             <!-- menu image-->
             
-                    <Frame  BackgroundColor="White" x:Name="fab" Margin="0" Padding="0" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="End">
+                    <Frame  BackgroundColor="Transparent" x:Name="fab" Margin="0" Padding="0"  HorizontalOptions="CenterAndExpand" VerticalOptions="End">
                         <Frame.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS">0,20,20,80</On>
-                    <On Platform="Android">0,20,20,50</On>
+                    <On Platform="iOS">0,0,0,30</On>
+                    <On Platform="Android">0</On>
                 </OnPlatform>
             </Frame.Margin>
                         <Frame.CornerRadius>
@@ -60,102 +60,130 @@
 
                     <!-- menu list layout--> 
 
-                    <Frame Padding="0" IsVisible="False" x:Name="fb" HasShadow="False" HorizontalOptions="End" VerticalOptions="End"  BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" IsVisible="False" x:Name="fb" HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="End"   WidthRequest="50" HeightRequest="50">
                         <Frame.Margin>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS">0,20,20,80</On>
-                    <On Platform="Android">0,20,20,50</On>
-                </OnPlatform>
-            </Frame.Margin>
-                        <Frame.CornerRadius>
-                            <OnPlatform x:TypeArguments="x:Single">
-                                <On Platform="iOS" Value="25"></On>
-                                <On Platform="Android" Value="40"></On>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS">0,20,20,80</On>
+                                <On Platform="Android">0,20,20,50</On>
                             </OnPlatform>
-                        </Frame.CornerRadius>
-                        <Image Source="facebook.png" HeightRequest="40" WidthRequest=" 40"></Image>
+                        </Frame.Margin>
+                        
+                            
+                                <Frame.CornerRadius>
+                                    <OnPlatform x:TypeArguments="x:Single">
+                                        <On Platform="iOS" Value="25"></On>
+                                        <On Platform="Android" Value="40"></On>
+                                    </OnPlatform>
+                                </Frame.CornerRadius>
+                                <Image Source="facebook.png" HeightRequest="40" WidthRequest=" 40">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedTfb1"></TapGestureRecognizer>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            
+                        
                     </Frame>
                               
-                    <Frame Padding="0" IsVisible="False"  x:Name="twit" HasShadow="False" HorizontalOptions="End" VerticalOptions="End" WidthRequest="50" HeightRequest="50" BackgroundColor="White">
+                    <Frame Padding="0" IsVisible="False"  x:Name="twit" HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="End" WidthRequest="50" HeightRequest="50" >
                         <Frame.Margin>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS">0,20,20,80</On>
-                    <On Platform="Android">0,20,20,50</On>
-                </OnPlatform>
-            </Frame.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS">0,20,20,80</On>
+                                <On Platform="Android">0,20,20,50</On>
+                            </OnPlatform>
+                        </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
                                 <On Platform="Android" Value="40"></On>
                             </OnPlatform>
                         </Frame.CornerRadius>
-                        <Image Source="twit.png" HeightRequest="40" WidthRequest=" 40" ></Image>
+                        <Image Source="twit.png" HeightRequest="40" WidthRequest=" 40" >
+                           <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedTwit1"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </Frame>
                             
                               
-                    <Frame Padding="0" x:Name="fb2" IsVisible="False"  HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" x:Name="fb2" IsVisible="False"  HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
                         <Frame.Margin>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS">0,20,20,80</On>
-                    <On Platform="Android">0,20,20,50</On>
-                </OnPlatform>
-            </Frame.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS">0,20,20,80</On>
+                                <On Platform="Android">0,20,20,50</On>
+                            </OnPlatform>
+                        </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
                                 <On Platform="Android" Value="40"></On>
                             </OnPlatform>
                         </Frame.CornerRadius>
-                        <Image Source="facebook.png" HeightRequest="40" WidthRequest=" 40" ></Image>
+                        <Image Source="facebook.png" HeightRequest="40" WidthRequest=" 40" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tappedfb2"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </Frame>
                             
 
-                    <Frame Padding="0" x:Name="twit2" IsVisible="False"  HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" x:Name="twit2" IsVisible="False"  HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
                         <Frame.Margin>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS">0,20,20,80</On>
-                    <On Platform="Android">0,20,20,50</On>
-                </OnPlatform>
-            </Frame.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS">0,20,20,80</On>
+                                <On Platform="Android">0,20,20,50</On>
+                            </OnPlatform>
+                        </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
                                 <On Platform="Android" Value="40"></On>
                             </OnPlatform>
                         </Frame.CornerRadius>
-                        <Image Source="twit.png" HeightRequest="40" WidthRequest=" 40" ></Image>
+                        <Image Source="twit.png" HeightRequest="40" WidthRequest=" 40" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedTwit2"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </Frame>
 
-                    <Frame Padding="0" x:Name="fb3" IsVisible="False"  HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" x:Name="fb3" IsVisible="False"  HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
                         <Frame.Margin>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS">0,20,20,80</On>
-                    <On Platform="Android">0,20,20,50</On>
-                </OnPlatform>
-            </Frame.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS">0,20,20,80</On>
+                                <On Platform="Android">0,20,20,50</On>
+                            </OnPlatform>
+                        </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
                                 <On Platform="Android" Value="40"></On>
                             </OnPlatform>
                         </Frame.CornerRadius>
-                        <Image Source="facebook.png" HeightRequest="40" WidthRequest=" 40" ></Image>
+                        <Image Source="facebook.png" HeightRequest="40" WidthRequest=" 40" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tappedfb3"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </Frame>
 
-                    <Frame Padding="0" x:Name="twit3" IsVisible="False"  HasShadow="False" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Frame Padding="0" x:Name="twit3" IsVisible="False"  HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="End" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
                         <Frame.Margin>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS">0,20,20,80</On>
-                    <On Platform="Android">0,20,20,50</On>
-                </OnPlatform>
-            </Frame.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS">0,20,20,80</On>
+                                <On Platform="Android">0,20,20,50</On>
+                            </OnPlatform>
+                        </Frame.Margin>
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single">
                                 <On Platform="iOS" Value="25"></On>
                                 <On Platform="Android" Value="40"></On>
                             </OnPlatform>
                         </Frame.CornerRadius>
-                        <Image Source="twit.png" HeightRequest="40" WidthRequest=" 40" ></Image>
+                        <Image Source="twit.png" HeightRequest="40" WidthRequest=" 40" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedTwit3"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </Frame>
 
 
